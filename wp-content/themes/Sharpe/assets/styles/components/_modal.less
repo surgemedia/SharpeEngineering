@@ -1,0 +1,387 @@
+/*======================================
+=            LightBox Modal            =
+======================================*/
+.ekko-lightbox{
+  .modal-dialog{
+    margin-top: 52px;
+  }
+}
+
+
+
+
+
+/*=============================================
+=            Request a Quote Modal            =
+=============================================*/
+
+
+  .modal-backdrop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: #FFF;
+      &.in {
+        opacity: 0.92;
+        filter: alpha(opacity=92);
+      }
+  }
+  #newsletter,
+  #modalItem{
+  .modal-content {
+    border-radius: 0px;
+    .modal-header{
+    	padding:3em 3em 0 3em;
+  	border: 0px;
+    	h4{
+    	  font-size: x-large;
+    	  display:inline-block;
+        float:left;
+    	}
+    	a.close{
+    	  opacity: 1;
+      	  color: #fff;
+      	  background-color: @light-grey;
+      	  padding: 0.3em;
+      	  font-size: 1.2em;
+      	  position: absolute;
+      	  right: -1.6em;
+      	  top: 0;
+          line-height: 0;
+    	}
+    }
+    .modal-body{
+    	padding:1em 3em 1.5em 3em;
+    	width:100%;
+    	display:inline-block;
+    	
+    	input[type="submit"]{
+        color: @dark-blue;
+    	  text-transform: uppercase;
+    	  background-color: transparent;
+    	  border: 0;
+        font-size: 1.3em;
+
+    	}
+      .gform_wrapper .gfield_required{
+        vertical-align: baseline;
+      }
+      .gform_footer{
+        text-align: right;
+        i{color:@light-grey;
+          font-weight: bolder;
+          vertical-align: middle;}
+
+      }
+    	label{
+    	  padding-left: 1em;
+     	  font-weight: normal;
+    	}
+      form{
+        p{ button{
+            background: none;
+            border: 0;
+            font-size: 1.1em;
+
+            i{
+               margin-left: .5em;
+              font-size: .8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 8em auto;
+    }
+}
+
+
+
+/*============================
+=            Form            =
+============================*/
+
+.form-control{
+	border-radius: 0px;
+	background: @input-bg;
+	border:none;
+}
+div.wpcf7-validation-errors{
+	width:75%
+}
+.ginput_container {
+  input, textarea
+  {.form-control;}
+  input:after[type="submit"]{
+    content:'xxxxx';
+  }
+}
+
+
+/*===================================
+=            Video Modal            =
+===================================*/
+.modal.video_item{
+    .modal-dialog{
+      width:100%;
+    }
+
+  .modal-content {
+  border-radius: 0px;
+  box-shadow: none;
+  width: 100%;
+  border: none;
+  .video-content{
+    width: 55%;
+    margin:auto;
+    border-top: 2px solid @light-grey;
+    border-bottom: 2px solid @light-grey; 
+  }
+  .modal-header{
+    padding:3em 3em 0 3em;
+  border: 0px;
+  position:relative;
+    h4{
+      font-size: x-large;
+      display:inline-block;
+    }
+    b{
+      text-transform: uppercase;
+      font-family: 'DINOT-Medium', sans-serif;
+    }
+    a.close{
+      opacity: 1;
+        color: @blue;
+        background-color: none;
+        padding: 0.3em;
+        font-size: 2.8em;
+        position: absolute;
+        right: 0;
+        top: 1em;
+    }
+  }
+  .modal-body{
+    padding:1em 0em 1.5em 0em;
+    width:100%;
+    display:inline-block;
+    .viewall{
+      color:@dark-blue;
+      i{
+        
+      }
+    }
+    .margin{
+      width:90%;
+      margin: auto;
+      p{
+        display: block !important;
+
+      }
+      .viewall{
+        float:none !important;
+      }
+    }
+    .video{
+      margin: 1em 0 1em 0; 
+      iframe{
+      min-height: 600px;
+      width:100%;
+      }
+     } 
+    input[type="submit"]{
+      margin-top: 1.5em;
+      background-color: transparent;
+      border: 0;
+      font-size: 1.3em;
+
+    }
+    label{
+      padding-left: 1em;
+      font-weight: normal;
+    }
+
+  }
+}
+  
+
+}
+
+/*==================================
+=            Responsive            =
+==================================*/
+
+@media (max-width: @screen-md-max) {
+
+.modal.video_item .modal-content .video-content{
+  width:80%;
+}
+
+
+}
+
+@media (max-width: @screen-sm-max) {
+  
+  
+  .modal-dialog {
+      width: 95%;
+      margin: 2em 0em;
+    }
+
+
+  #newsletter,
+  #modalItem{
+  .modal-content {
+    border-radius: 0px;
+    .modal-header{
+      padding:3em 3em 0 3em;
+    border: 0px;
+      h4{
+        font-size: x-large;
+        display:inline-block;
+      }
+      a.close{
+        
+          right: 0em;
+          
+      }
+    }
+    .modal-body{
+      padding:1em 1em 1.5em 1em;
+      width:100%;
+      display:inline-block;
+      
+      input[type="submit"]{
+        color: @dark-blue;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 0;
+        font-size: 1.3em;
+
+      }
+      .gform_footer{
+        text-align: right;
+        i{color:@light-grey;
+          font-weight: bolder;
+          vertical-align: middle;}
+
+      }
+      label{
+        padding-left: 1em;
+        font-weight: normal;
+      }
+      form{
+        p{ button{
+            background: none;
+            border: 0;
+            font-size: 1.1em;
+
+            i{
+               margin-left: .5em;
+              font-size: .8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.modal.video_item{
+    .modal-dialog{
+      width:100%;
+    }
+
+  .modal-content {
+  border-radius: 0px;
+  box-shadow: none;
+  width: 100%;
+  border: none;
+  .video-content{
+    width: 80%;
+    margin:auto;
+    border-top: 2px solid @light-grey;
+    border-bottom: 2px solid @light-grey; 
+  }
+  .modal-header{
+    padding:3em 3em 0 3em;
+  border: 0px;
+  position:relative;
+    h4{
+      font-size: x-large;
+      display:inline-block;
+    }
+    b{
+      text-transform: uppercase;
+      font-family: 'DINOT-Medium', sans-serif;
+    }
+    a.close{
+      opacity: 1;
+        color: @blue;
+        background-color: none;
+        padding: 0.3em;
+        font-size: 2.8em;
+        position: absolute;
+        right: 0;
+        top: 1em;
+    }
+  }
+  .modal-body{
+    padding:1em 0em 1.5em 0em;
+    width:100%;
+    display:inline-block;
+    .viewall{
+      color:@dark-blue;
+      i{
+        
+      }
+    }
+    .margin{
+      width:90%;
+      margin: auto;
+    }
+    .video{
+      margin: 1em 0 1em 0; 
+      iframe{
+      min-height: 300px;
+      width:100%;
+      }
+     } 
+    input[type="submit"]{
+      margin-top: 1.5em;
+      background-color: transparent;
+      border: 0;
+      font-size: 1.3em;
+
+    }
+    label{
+      padding-left: 1em;
+      font-weight: normal;
+    }
+
+  }
+}
+  
+
+}
+
+
+
+}
+
+@media (max-width: @screen-xs-max) {
+.modal.video_item .modal-content .video-content{
+  width:100%;
+}
+
+
+}
+

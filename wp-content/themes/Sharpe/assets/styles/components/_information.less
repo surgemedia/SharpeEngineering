@@ -1,0 +1,105 @@
+.information{
+	padding: 3em 0 0 0;
+	margin: 0em 0 3em 0;
+	list-style: none;
+	width: 100%;
+	border-top: .5em solid @lines;
+	display: inline-block;
+	.section{
+		display: inline-block;
+		width: 20%;
+		float: left;
+		ul{
+			color: @dark-grey;
+		   display: inline-block;
+		   list-style: none;
+		   border-left: solid 1px @lines;
+		   padding: 0 0 0 1em;
+		   width: 100%;
+		   word-wrap:break-word;
+		   i{
+		   	color:@grey;
+		   	font-size: 2.5em;
+		   }
+		   
+		   .title{
+		   	margin: 0 0 1em 0;
+		   	text-transform: uppercase;
+		   		font-size: 1em;	
+		   	
+		   }
+		   .xx-small{
+		   	    font-size: .6em;
+    			padding-top: 1em;
+    			p{
+    				    line-height: 1;
+    			}
+		   }
+
+		   li{
+		   		img{margin-right: 7px;
+				&:last-child{margin: 0;}
+				
+				
+			}
+			
+		   	p{
+				font-size: .9em;
+				margin-bottom: 5px;	
+			&:hover{
+					
+					a:before{
+						content:'>';
+						padding-right: .5em;
+					}
+				}
+			}
+		   }
+	    }
+
+
+	}
+	
+}
+
+/*==================================
+=            Responsive            =
+==================================*/
+
+@media (max-width: @screen-sm-max) {
+
+.information{
+	padding: 2em 0 0;
+	.section{
+		
+		width: 100%;
+		margin-bottom: 1em;
+		ul{
+			width: 100%;
+		   border-left: 0px;
+		   border-bottom: solid 1px @lines;
+		   padding-bottom: 1em;
+		  }
+
+
+	}
+	
+}
+
+
+
+
+
+}
+@media (max-width: @screen-sm-max) {
+.information .section ul .xx-small{
+
+		   	    font-size: 1em;
+    			padding-top: 1em;
+    			p{
+    				    line-height: 1.7;
+    			}
+		   }
+
+}
+

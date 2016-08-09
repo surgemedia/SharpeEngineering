@@ -1,0 +1,121 @@
+#categories_post_type{
+
+	min-height: 52em;
+
+  hr{ width:95%;}
+  h3 {text-transform: uppercase; 
+  	   margin: 1em 0em;}
+  ul { .ul_reset; width:95%; }
+  .text{width: 95%;
+    margin-bottom: 1em;}
+  .feed li {
+    clear:both;
+    padding-bottom: 0;
+    margin-bottom: 1.5em;
+    border-bottom: 2px solid @lines;
+    display:inline-block;
+    width:100%;
+    .img {
+      float:left;
+      display: inline-block;
+      margin: 0.4em 1em 1em 0em;
+      img { 
+        
+        display: inline-block; 
+      }
+      &.extended{
+        
+      }
+    }
+    .textbox.noimage{
+      width:100%;
+    }
+    
+    .textbox {
+      display: inline-block;
+      width:65%;
+        .title { 
+          clear: both; 
+          font-weight: bold; 
+          font-size: 1.2em;
+        }
+        p {  display: block; font-weight: normal;
+      }    
+     }
+    .feed li:last-child {
+      border: 0px;
+    }
+  }
+  .feed li.noborder{border:0;margin-bottom: 0;}
+  li:last-child{
+    border-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  
+ 
+
+
+}
+
+
+/*==================================
+=            Responsive            =
+==================================*/
+
+@media (max-width: @screen-sm-max) {
+
+  #categories_post_type{
+    height: 100%;
+    hr{ width:100%;}
+    h3 {text-transform: uppercase; 
+         margin: 1em 0em;}
+    ul { .ul_reset; width:100%; }
+    .feed li {
+      clear:both;
+      padding-bottom: 0;
+      margin-bottom: 1.5em;
+      border-bottom: 2px solid @lines;
+      display:inline-block;
+      width:100%;
+      .img {
+        float:left;
+        display: inline-block;
+        margin: 0.4em 1em 1em 0em;
+        img { 
+          
+          display: inline-block; 
+        }
+        &.extended{
+          
+        }
+      }
+      .textbox {
+        display: inline-block;
+        width:100%;
+          .title { 
+            clear: both; 
+            font-weight: bold; 
+            font-size: 1.2em;
+          }
+          p {  display: block; font-weight: normal;
+        }    
+       }
+      .feed li:last-child {
+        border: 0px;
+      }
+    }
+    li:last-child{
+      border-bottom: 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+
+
+
+
+
+}
+
+

@@ -1,0 +1,101 @@
+/*===================================
+=            Feed Styles            =
+===================================*/
+#contact_map,
+#latest_videos {
+    ul{
+      padding: 0;
+      list-style: none;
+      
+    }
+    h3 {
+        text-transform: uppercase; 
+        margin: .4em 0em 1.3em 0;
+        display: inline-block;
+    }
+    .video {
+        width: 100%; display: inline-block;
+        position: relative;
+        
+        i {
+            color:@blue;
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            border:3px solid #fff;
+            background:rgba(256,256,256,0.5);
+            padding: 0.5em 0.6em;
+            font-size: 5em;
+            border-radius: 100%;
+            text-align: center;
+        }
+        img {
+            width: 100%; 
+            display: inline-block;
+        }
+    }
+    .title {
+        font-weight: bold;
+        clear:both;
+        display: block;
+        font-size: 1.2em;
+        margin: 1em 0 .5em 0;
+    }
+    p {display: inline;}
+    .meta {
+        display:inline;
+        font-weight: 700;
+    }
+    
+    .img{
+      position: relative;
+      i.circle{
+        .circle(7em,2em,@play-button);
+        color:#fff;
+        font-size: 4em;       
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border:#fff solid 5px;
+        padding-left: .2em;
+        color:#fff;
+        
+      }
+    }
+    .viewall{
+      font-size: 1.2em;
+      background: none;
+      margin: 0 0 0 0;
+      float: left;
+      padding: .7em 1em 0 0;
+      display:inline-block;
+ 
+    }
+    .acf-map{
+        margin-top:0;
+    }
+
+}
+
+
+/*===================================
+=       Sidebar Latest Videos       =
+===================================*/
+
+#latest_videos_sidebar{
+   #latest_videos;
+   .viewall{
+      font-size: 1.2em;
+      background: none;
+      margin: 0 0 0 0;
+      float: right;
+      padding: .7em 1em 0 0;
+      display:inline-block;
+ 
+    }
+
+}
+
+
+

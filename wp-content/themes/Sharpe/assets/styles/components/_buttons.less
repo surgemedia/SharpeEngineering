@@ -1,0 +1,442 @@
+.button {
+	display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+
+
+
+
+
+
+
+
+
+}
+    .facebook { color:@facebook;}
+    .linkedin { color:@linkedin;}
+    .twitter { color:@twitter;}
+    .instagram { color:@instagram;}
+    .youtube { color:@youtube;}
+    .android{ color:@android;}
+    .apple{ color:@apple;}
+    .share{ color:@share;}
+/*========================================
+=            Subscribe Button            =
+========================================*/
+.subscribe{
+  i{
+    font-size: 1.4em;
+  }
+}
+
+/*======================================
+=            Submit Buttons            =
+======================================*/
+.gform_footer{
+        text-align: right;
+        i{color:@light-grey;
+          font-weight: bolder;
+          vertical-align: middle;}
+
+  input[type="submit"]{
+        margin-top: 0em;
+        background-color: transparent;
+        border: 0;
+        font-size: 1.3em !important;
+        text-transform: uppercase;
+      }
+  }
+
+.button-primary {
+  color: #FFF;
+  background-color: #5CB85C;
+  border-color: #4CAE4C;
+  }
+/*=================================================
+=            Download & Social Buttons            =
+=================================================*/
+.apps{
+    padding-bottom: 0.8em;
+    margin-top: 10px;
+    div span{
+      font-size: 1.2em;
+      color:@light-grey;
+      vertical-align: .7em;
+      i.arrow{
+              vertical-align: sub;
+          color:@light-grey;
+      }
+      
+    }
+    .download-app{
+      display: inline-block;
+        vertical-align: 0.4em;
+    }
+    .media,
+    .os{
+      font-size: 2.5em;
+        padding: 0 .3em;
+      display: inline-block;
+      margin:0;
+     
+      border-right: 1px solid @lines;
+      height:1.3em;
+      .android{
+        
+        &:hover{ border-bottom: 2px solid @grey}  
+      }
+      .apple{
+        
+        &:hover{ border-bottom: 2px solid @grey}
+      }
+      
+    }
+    
+    #social{
+      font-size: 2.5em;
+      z-index: 1;
+      ul{list-style: none;padding: 0; text-align: center;}
+ 
+      i.arrow{
+        font-size: .6em;
+        display: block;
+      }
+    }
+    
+    .collapse,
+    .collapsing{
+      position: absolute;
+      background: #fff;
+      padding: 0 .38em; 
+      right: 0;
+    }
+     }
+
+
+.grid-contact{
+    padding-top: 2em;
+    list-style: none;
+    ul{
+       padding: 0 2em 0 0;
+       display: inline-block;
+        
+       }
+
+    li{
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 .2em;
+      
+    }
+    a:hover{
+        border-bottom: solid 2px @border-lines;
+      }
+    .os{
+      li{
+        font-size: 2.8em;
+        
+      }
+    }
+    .social{
+      li{font-size: 2.5em;}
+      
+    }
+    .subscribe{
+      li{
+        a{color:@light-grey;}
+        font-size: 2em;
+         span{
+          padding-left: .3em;
+          vertical-align: text-bottom;}
+
+        }
+    }
+
+  
+}
+
+/*====================================
+=        Aside Button  "Quote"       =
+====================================*/
+.aside-button{
+    transform: rotate(90deg);
+    position:fixed;
+    color: #fff;
+      right: -11em;
+  top: 15.4em;
+  width: 512px;
+  height: 3em;
+  text-align: left;
+  background: @side-button;
+  border-radius: 0;
+  outline: none;
+  font-size: 1.5em;
+  z-index: 100;
+  &:focus{
+    color:#fff;
+    outline: none;
+  }
+}
+/*=======================================
+=            Readmore Button            =
+=======================================*/
+
+.readmore{
+  a{color: @light-grey;
+    font-size: 1.5em;
+    transition: all ease .3s;
+    &:hover{
+      color: #9fb6c1;
+      transition: all ease .3s;
+    } 
+  }
+
+}
+
+
+
+/*=============================================
+=            Previous Next Buttons            =
+=============================================*/
+.alignleft,
+.alignright{
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+}
+
+/*========================================
+=            Guarantee Button            =
+========================================*/
+@keyframes jump {
+  50%   { transform: scale(1.2,1.2); }
+  100% { transform: scale(1,1); }
+}
+.btn_quality:hover{
+    display:block;
+    
+    transition: all .3s ease;
+    animation: jump .5s ;
+  
+}
+#guarantee{
+  width:30em;
+  border-right:solid 1em;
+  border-bottom: solid 1em;
+  border-color: rgba(41, 41, 41, 0.5);
+  position:absolute;
+  top:0;
+ 
+  overflow:hidden;
+  z-index:1;
+  .icon{
+    width: 165px;
+    display:inline-block;
+  }
+  .logo{
+    display:inline-block;
+    padding-top: 1em;
+    width: 200px;
+  }
+  p{
+    padding-top: 1em;
+  }
+  ul{
+   display: inline-block;
+  list-style: none;
+  padding: 0;
+  }
+  .content{
+    padding: 0 1.5em 1.5em 0; 
+    li{
+      margin-top: 1em;
+    }
+  }
+}
+
+.btn-grey{
+  border-radius: 0px;
+  width:100%;
+  background-color: @lines;
+  border-top: 1px solid @border-lines;
+  color: @dark-blue;
+  
+  span{
+    float:left;
+  }
+  i{
+    float:right;
+    color:@light-grey;
+  }
+  &:hover{
+    background-color: @btn-hover;
+    border-top: 1px solid @border-lines;
+    color: #fff;
+  }
+}
+
+/*=============================================
+=            Section comment block            =
+=============================================*/
+.download{
+  background: green;
+  padding: 1em;
+  text-transform: uppercase;
+  border-radius: 4px; 
+  text-decoration: none;
+  color: #fff;
+  &:hover{
+    color:green;
+    text-decoration: none;
+    background-color: @grey
+  }
+}
+
+/*==========================================
+=            Buttons Mixin                 =
+=        mixin for chevon circles          =
+===========================================*/
+
+.circle(@font-size;@line_height: 1em; @bg_color) {
+    border-radius: 100%;
+    width: @line_height;
+    height: @line_height;
+    line-height: @line_height;
+    text-align: center;
+    background: @bg_color;
+    font-size: @font-size;
+}
+
+
+/*===================================
+=            Responsive             =
+===================================*/
+@media (max-width: @screen-md-max) { 
+  
+.aside-button{
+    
+    height: 2em;
+   
+}
+
+}
+@media (max-width: @screen-sm-max) { 
+
+.apps{
+  .download-app{
+    position: fixed;
+    bottom: 1px;
+    left: 0;
+    background-color: #0b1f2c;
+    border-top: 2px solid #7d868c;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    padding: .3em;
+    span{
+      color:#fff;
+      i{
+        color: #8eb8c9;
+      }
+    }
+  }
+
+}  
+
+.aside-button{
+    transform:none;
+    position:static;
+    color: #546670;
+      right: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  text-align: left;
+  background: none;
+  border-radius: 0;
+  outline: none;
+  font-size: 1.3em;
+  float: left;
+  &:focus{
+    color: #546670;
+  }
+}
+
+
+.btn_quality{
+     
+  img{
+      height: 4em;
+    }
+}
+.btn_quality:hover{
+    display:block;
+    
+    transition: none;
+    animation: none;
+
+
+}
+#guarantee{
+  width: 100%;
+  
+  top:0px;
+  left: 17px;
+  overflow:hidden;
+  z-index:1;
+  .icon{
+    width: 100%;
+    display:inline-block;
+  }
+  
+  p{
+    padding-top: 1em;
+  }
+  ul{
+   width:100%;
+  }
+  .content{
+    a{
+
+      img{
+        height: 4em;
+      }
+    }
+
+    padding: 0 1.5em 1.5em 0; 
+    li{
+      margin-top: 1em;
+      width:100%;
+    }
+  }
+}
+}
+
+
+@media (max-width: @screen-xs-max) { 
+.aside-button{
+ font-size: 1.1em;
+
+}
+.subscribe{
+  margin-top: 1em;
+  float:left !important;
+}
+
+}

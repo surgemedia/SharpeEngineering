@@ -1,0 +1,209 @@
+.jumbotron (@bg_color: @grey) {
+    margin: 0px;
+    border: 0px;
+    color: #fff;
+    min-height: 502px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: @bg_color;
+    transition: 0.3s all ease !important;
+    background-size: 100%;
+    padding: 0px;
+    border-radius: 0px;
+    .square {
+        position: absolute;
+        background-color: @square;
+        right: -50px;
+        top: 0;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container .jumbotron.bg_image {
+        .jumbotron;
+    }
+}
+
+
+/*======================================
+=            Jumbotron Menu            =
+======================================*/
+
+.jumbotron {
+    position: relative;
+    .title {
+        position: absolute;
+        font-family: 'DINOT', sans-serif;
+        right: 1em;
+        font-size: 3.2em;
+        bottom: 0;
+        text-shadow: 1px 1px @dark-blue;
+        text-transform: uppercase;
+        text-align: right;
+        // max-width: 14.2em;
+
+    }
+    
+}
+.menu {
+        height: 502px;
+        font-family: 'DINOT-Medium', sans-serif;
+        position: absolute;
+        top: 6em;
+        left: initial;
+        z-index: 1;
+        width:100%;
+        .nav {
+            height: 100%;
+            li:first-child {
+                a {
+                    background-color: #fff;
+                    color: @dark-blue;
+                }
+            }
+            li a {
+                background-color: hsla(199, 63%, 18%, 0.74);
+                border-radius: 0px;
+                padding-left: 2em;
+                border-bottom: 1px solid transparent;
+            }
+        }
+        #mega-menu-wrap-primary_navigation {
+            width: 25%;
+            height: 100%;
+            #mega-menu-primary_navigation li {
+                width: 100%;
+                a{
+                    cursor: default;
+                   
+                }
+                .mega-sub-menu {
+                    position: absolute;
+                    left: 20.35em;
+                    top: 0px;
+                }
+                &.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item ul.mega-sub-menu{
+                    width: 22em;
+                }
+
+
+                &.mega-menu-item-has-children > a:after {
+                    content: '+';
+                    font-size: 1.2em;
+                    vertical-align: baseline;
+                    float: right;
+                }
+                &:hover {
+                    
+                    a{transition: .3s all ease;}
+                    
+                    // &.mega-menu-item-has-children > a[href]:before {
+                    //     content: "\e144";
+                    //     font-family: 'Glyphicons Halflings';
+                        
+                        
+                    // }
+                    &.mega-menu-item-has-children > a:after {
+                        content: '-';
+                    }
+                }
+            }
+        }
+    }
+
+/*==================================
+=            Responsive            =
+==================================*/
+
+@media (max-width: @screen-sm-max) {
+
+    .jumbotron {
+        width: 100%;
+        height: 100%;
+        min-height: 199px;
+        background-size: auto 100%;
+        border-radius: 0px;
+    }
+  .menu {
+        top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+       
+        .nav {
+            height: 100%;
+            li:first-child {
+                a {
+                    background-color: #fff;
+                    color: @dark-blue;
+                }
+            }
+            li a {
+                background-color: hsla(199, 63%, 18%, 0.74);
+                border-radius: 0px;
+                padding-left: 2em;
+                border-bottom: 1px solid transparent;
+            }
+        }
+
+        #mega-menu-wrap-primary_navigation {
+            width: 100%;
+            height: 100%;
+            .mega-menu-toggle{
+                color:@dark-blue;
+                background: transparent;
+
+                &:before{
+                  border: 1px solid;
+                  border-radius: 4px;
+                  padding: 0 0.2em;
+                  font-size: 32px;
+                }
+                &.mega-menu-open{
+                    margin-bottom: 1em;
+                    &:before{
+                     content: "\f333";
+                     background: #083135;
+                     color:#fff;
+                     padding: 0 0.2em;
+                     
+                    }
+                }
+            }
+            
+
+            #mega-menu-primary_navigation {
+                background: #333e48;
+                li {
+                    width: 100%;
+                    &.mega-menu-item > a{
+                        height: 50px;
+                        padding-left: 1em;
+                    }
+
+                    .mega-sub-menu {
+                        position: absolute;
+                        left: 20.4em;
+                        top: 0px;
+
+                    }
+                    &.mega-menu-item-has-children > a:after {
+                        content: '+';
+                        font-size: 1.2em;
+                        vertical-align: baseline;
+                        float: right;
+                    }
+                    &:hover {
+                        &.mega-menu-item-has-children > a:after {
+                            content: '-';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
