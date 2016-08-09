@@ -1,0 +1,46 @@
+[12-Mar-2015 05:36:04 UTC] PHP Fatal error:  Error locating lib/function-truncate-content.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 35
+[23-Jul-2015 00:36:31 UTC] WordPress database error Table 'shengs4_db1.wp_options' doesn't exist for query SELECT option_value FROM wp_options WHERE option_name = 'updraft_service' LIMIT 1 made by do_action('admin_init'), call_user_func_array, UpdraftPlus->admin_menu, require_once('/plugins/updraftplus/admin.php'), UpdraftPlus_Admin->__construct, UpdraftPlus_Admin->admin_init, UpdraftPlus_Options::get_updraft_option, get_option
+[23-Jul-2015 03:02:36 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:02:43 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:02:51 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:02:58 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:03:04 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:03:11 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:03:17 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:03:24 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:03:30 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:03:37 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:03:42 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:03:43 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:03:50 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:04:00 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:04:03 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:04:08 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[23-Jul-2015 03:04:16 UTC] PHP Fatal error:  Error locating lib/action-post-type-features.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 46
+[27-Jul-2015 02:19:36 UTC] PHP Fatal error:  Error locating lib/function-svg-upload-able.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 49
+[27-Jul-2015 02:20:04 UTC] PHP Fatal error:  Error locating lib/function-svg-upload-able.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 49
+[27-Jul-2015 02:20:36 UTC] PHP Fatal error:  Error locating lib/function-svg-upload-able.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 49
+[31-Jul-2015 03:29:37 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 03:30:38 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 03:31:06 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 03:32:08 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 03:33:18 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 03:34:52 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 04:03:25 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 04:04:57 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 04:08:57 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 04:28:45 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 04:34:02 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 04:37:01 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 04:37:30 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 04:39:54 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[31-Jul-2015 04:52:07 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[18-Aug-2015 05:27:34 UTC] PHP Fatal error:  Error locating lib/action-post-type-downloads.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 52
+[18-Aug-2015 05:27:37 UTC] PHP Fatal error:  Error locating lib/action-post-type-downloads.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 52
+[18-Aug-2015 05:27:38 UTC] PHP Fatal error:  Error locating lib/action-post-type-downloads.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 52
+[18-Aug-2015 05:30:36 UTC] PHP Fatal error:  Error locating lib/action-post-type-downloads.php for inclusion in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 52
+[19-Aug-2015 03:37:37 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[25-Aug-2015 05:49:16 UTC] PHP Fatal error:  Call to undefined function mb_strtolower() in /home/shengs4/public_html/wp-content/plugins/breadcrumb-navxt/class.bcn_admin.php on line 502
+[20-Sep-2015 23:49:07 UTC] PHP Warning:  fopen(/usr/local/apache/htdocs/php5.ini): failed to open stream: Permission denied in /home/shengs4/public_html/wp-content/plugins/increase-upload-max-filesize/increase-upload-max-filesize.php on line 334
+[20-Sep-2015 23:49:07 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/shengs4/public_html/wp-content/plugins/increase-upload-max-filesize/increase-upload-max-filesize.php on line 338
+[20-Sep-2015 23:49:07 UTC] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/shengs4/public_html/wp-content/plugins/increase-upload-max-filesize/increase-upload-max-filesize.php on line 343
