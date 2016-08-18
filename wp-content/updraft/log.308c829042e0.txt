@@ -1,0 +1,116 @@
+0000.009 () Opened log file at time: Thu, 18 Aug 2016 00:02:48 +0000 on http://localhost/sharpe
+0000.009 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.17 WP: 4.4.2 PHP: 5.5.9-1ubuntu4.19 (Linux desktop8 3.19.0-66-generic #74~14.04.1-Ubuntu SMP Tue Jul 19 19:56:11 UTC 2016 x86_64) MySQL: 5.5.44 WPLANG: en_AU Server: Apache/2.4.7 (Ubuntu) safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 26.7M | 27.8M) multisite: N openssl: OpenSSL 1.0.1f 6 Jan 2014 mcrypt: N LANG: C ZipArchive::addFile: Y
+0000.009 () Free space on disk containing Updraft's temporary directory: 4909.6 MB
+0000.010 () Restore job started. Entities to restore: plugins, themes, uploads, others, db. Restore options: {"updraft_restorer_replacesiteurl":false,"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false}
+0000.027 () Entity: db
+0000.027 () restore_backup(backup_file=backup_2016-08-17-2357_Home_dee677edc47a-db.gz, type=db, info=a:0:{}, last_one=)
+0000.027 () Unpacking backup...
+0000.028 () Database successfully unpacked
+0000.028 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.028 () Using direct MySQL access; value of use_mysqli is: 1
+0000.031 () Max packet size: 32 MB
+0000.032 () Entering maintenance mode
+0000.032 () Enabling Maintenance mode&#8230;
+0000.032 () <strong>Backup of:</strong> http://www.sharpeengineering.com.au
+0000.071 () Content URL: http://www.sharpeengineering.com.au/wp-content
+0000.071 () Uploads URL: http://www.sharpeengineering.com.au/wp-content/uploads
+0000.072 () Old table prefix: wp_
+0000.072 () Site information: multisite=0
+0000.074 () New table prefix: wp_
+0000.076 () Restoring table (MyISAM): wp_options
+0000.181 () Restoring prior UD configuration (table: wp_options; keys: 95)
+0000.300 () PHP event: code E_NOTICE: Undefined index: port (line 3405, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: port (line 3405, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: path (line 3409, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: host (line 3413, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: user (line 3417, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: host (line 3421, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: user (line 3427, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: webdav (line 3430, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: host (line 3430, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: port (line 3430, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.301 () PHP event: code E_NOTICE: Undefined index: path (line 3430, wp-content/plugins/updraftplus/class-updraftplus.php)
+0000.340 () Restoring table (MyISAM): wp_users
+0000.348 () Restoring table (MyISAM): wp_usermeta
+0000.359 () Restoring table (MyISAM): wp_commentmeta
+0000.365 () Restoring table (MyISAM): wp_comments
+0000.369 () Restoring table (MyISAM): wp_links
+0000.374 () Restoring table (MyISAM): wp_postmeta
+0000.625 () Restoring table (MyISAM): wp_posts
+0001.006 () Database queries processed: 50 in 0.98 seconds
+0001.009 () Restoring table (InnoDB): wp_signups
+0001.016 () Restoring table (MyISAM): wp_term_relationships
+0001.024 () Restoring table (MyISAM): wp_term_taxonomy
+0001.029 () Restoring table (MyISAM): wp_termmeta
+0001.032 () Restoring table (MyISAM): wp_terms
+0001.038 () Restoring table (MyISAM): wp_blc_filters
+0001.041 () Restoring table (MyISAM): wp_blc_instances
+0001.051 () Restoring table (MyISAM): wp_blc_links
+0001.058 () Restoring table (MyISAM): wp_blc_synch
+0001.068 () Restoring table (InnoDB): wp_bp_activity
+0001.071 () Restoring table (InnoDB): wp_bp_activity_meta
+0001.075 () Restoring table (InnoDB): wp_bp_notifications
+0001.080 () Restoring table (InnoDB): wp_bp_notifications_meta
+0001.083 () Restoring table (InnoDB): wp_bp_user_blogs
+0001.087 () Restoring table (InnoDB): wp_bp_user_blogs_blogmeta
+0001.091 () Restoring table (InnoDB): wp_bp_xprofile_data
+0001.096 () Restoring table (InnoDB): wp_bp_xprofile_fields
+0001.100 () Restoring table (InnoDB): wp_bp_xprofile_groups
+0001.104 () Restoring table (InnoDB): wp_bp_xprofile_meta
+0001.105 () Database queries processed: 100 in 1.08 seconds
+0001.107 () Restoring table (MyISAM): wp_itsec_lockouts
+0001.113 () Restoring table (MyISAM): wp_itsec_log
+0001.119 () Restoring table (MyISAM): wp_itsec_temp
+0001.122 () Restoring table (MyISAM): wp_rg_form
+0001.128 () Restoring table (MyISAM): wp_rg_form_meta
+0001.134 () Restoring table (MyISAM): wp_rg_form_view
+0001.175 () Restoring table (MyISAM): wp_rg_incomplete_submissions
+0001.181 () Restoring table (MyISAM): wp_rg_lead
+0001.232 () Restoring table (MyISAM): wp_rg_lead_detail
+0001.441 () Restoring table (MyISAM): wp_rg_lead_detail_long
+0001.496 () Restoring table (MyISAM): wp_rg_lead_meta
+0001.500 () Restoring table (MyISAM): wp_rg_lead_notes
+0001.501 () Database queries processed: 150 in 1.47 seconds
+0001.502 () Unlocking database and leaving maintenance mode
+0001.502 () Disabling Maintenance mode&#8230;
+0001.502 () Finished: lines processed: 153 in 1.47 seconds
+0001.503 () Cleaning up rubbish...
+0001.511 () Entity: plugins
+0001.511 () restore_backup(backup_file=backup_2016-08-17-2357_Home_dee677edc47a-plugins.zip, type=plugins, info=a:2:{s:4:"path";s:39:"/var/www/html/sharpe/wp-content/plugins";s:11:"description";s:7:"Plugins";}, last_one=)
+0001.511 () Unpacking backup... (backup_2016-08-17-2357_Home_dee677edc47a-plugins.zip, 20.1 Mb)
+0002.090 () Moving old data: filesystem method / updraft_dir is potentially possible
+0002.090 () Moving old data: can potentially use wp_filesystem method / -old
+0002.090 () Moving old data out of the way...
+0002.453 () Top-level entities being moved: wp-disable-automatic-updates, adminimize, breadcrumb-navxt, google-analyticator, updraftplus, advanced-custom-fields-pro, better-wp-security, increase-upload-max-filesize, tracking-script-manager, .DS_Store, regenerate-thumbnails-advanced, wp-ses, add-from-server, share-this, scripts-to-footerphp, post-types-order, enable-media-replace, create-client-role , user-role-editor, disable-comments, wp-deferred-javascripts, velvet-blues-update-urls, index.php, wp-media-category-management, wp-super-simple-speed, broken-link-checker, tinymce-advanced, regenerate-thumbnails, gravityforms, megamenu, Gravity-Forms-ACF-Field-master, menu-breadcrumb
+0002.460 () Moving unpacked backup into place...
+0002.768 () Top-level entities being moved: wp-disable-automatic-updates, adminimize, breadcrumb-navxt, google-analyticator, updraftplus, advanced-custom-fields-pro, better-wp-security, increase-upload-max-filesize, tracking-script-manager, .DS_Store, regenerate-thumbnails-advanced, wp-ses, add-from-server, share-this, scripts-to-footerphp, post-types-order, enable-media-replace, create-client-role , user-role-editor, disable-comments, wp-deferred-javascripts, velvet-blues-update-urls, index.php, wp-media-category-management, wp-super-simple-speed, broken-link-checker, tinymce-advanced, regenerate-thumbnails, gravityforms, megamenu, Gravity-Forms-ACF-Field-master, menu-breadcrumb
+0002.777 () Cleaning up rubbish...
+0002.780 () Entity: themes
+0002.780 () restore_backup(backup_file=backup_2016-08-17-2357_Home_dee677edc47a-themes.zip, type=themes, info=a:2:{s:4:"path";s:38:"/var/www/html/sharpe/wp-content/themes";s:11:"description";s:6:"Themes";}, last_one=)
+0002.780 () Unpacking backup... (backup_2016-08-17-2357_Home_dee677edc47a-themes.zip, 15.6 Mb)
+0003.140 () Moving old data: filesystem method / updraft_dir is potentially possible
+0003.140 () Moving old data: can potentially use wp_filesystem method / -old
+0003.140 () Moving old data out of the way...
+0003.173 () Top-level entities being moved: index.php, Sharpe
+0003.174 () Moving unpacked backup into place...
+0003.275 () Top-level entities being moved: Content Manager, index.php, Sharpe
+0003.277 () Cleaning up rubbish...
+0003.280 () Entity: uploads
+0003.280 () restore_backup(backup_file=backup_2016-08-17-2357_Home_dee677edc47a-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:39:"/var/www/html/sharpe/wp-content/uploads";s:11:"description";s:7:"Uploads";}, last_one=)
+0003.280 () Unpacking backup... (backup_2016-08-17-2357_Home_dee677edc47a-uploads.zip, 496 Mb)
+0007.936 () Moving old data: filesystem method / updraft_dir is potentially possible
+0007.936 () Moving old data: can potentially use wp_filesystem method / -old
+0007.936 () Moving old data out of the way...
+0008.271 () Moving unpacked backup into place...
+0008.571 () Cleaning up rubbish...
+0008.573 () restore_backup(backup_file=backup_2016-08-17-2357_Home_dee677edc47a-uploads2.zip, type=uploads, info=a:2:{s:4:"path";s:39:"/var/www/html/sharpe/wp-content/uploads";s:11:"description";s:7:"Uploads";}, last_one=)
+0008.574 () Unpacking backup... (backup_2016-08-17-2357_Home_dee677edc47a-uploads2.zip, 83.2 Mb)
+0010.076 () Moving unpacked backup into place...
+0010.139 () Cleaning up rubbish...
+0010.141 () Entity: others
+0010.141 () restore_backup(backup_file=backup_2016-08-17-2357_Home_dee677edc47a-others.zip, type=others, info=a:2:{s:4:"path";s:31:"/var/www/html/sharpe/wp-content";s:11:"description";s:6:"Others";}, last_one=1)
+0010.141 () Unpacking backup... (backup_2016-08-17-2357_Home_dee677edc47a-others.zip, 0.3 Mb)
+0010.154 () Cleaning up rubbish...
+0010.154 () Error: Failed to delete working directory after restoring. (/var/www/html/sharpe/wp-content/upgrade/a4e5f054)
+0010.161 () Restore successful!
+0010.162 () Restore successful

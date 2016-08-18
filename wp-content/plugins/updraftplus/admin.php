@@ -441,7 +441,7 @@ class UpdraftPlus_Admin {
 		
 		wp_enqueue_script('jquery-blockui', UPDRAFTPLUS_URL.'/includes/jquery.blockUI.js', array('jquery'), '2.70.0');
 	
-		wp_enqueue_script('jquery-labelauty', UPDRAFTPLUS_URL.'/includes/labelauty/jquery-labelauty.js', array('jquery'), '20150925');
+		wp_enqueue_script('jquery-labelauty', UPDRAFTPLUS_URL.'/includes/labelauty/jquery-labelauty.js', array('jquery'), '20160622-ud');
 		wp_enqueue_style('jquery-labelauty', UPDRAFTPLUS_URL.'/includes/labelauty/jquery-labelauty.css', array(), '20150925'); 
 
 		do_action('updraftplus_admin_enqueue_scripts');
@@ -577,8 +577,8 @@ class UpdraftPlus_Admin {
 		<div id="updraft-autobackup" class="updated autobackup">
 			<?php if (!class_exists('UpdraftPlus_Addon_Autobackup')) { ?>
 			<div style="float:right;"><a href="#" onclick="jQuery('#updraft-autobackup').slideUp(); jQuery.post(ajaxurl, {action: 'updraft_ajax', subaction: 'dismissautobackup', nonce: '<?php echo wp_create_nonce('updraftplus-credentialtest-nonce');?>' });"><?php echo sprintf(__('Dismiss (for %s weeks)', 'updraftplus'), 12); ?></a></div> <?php } ?>
-			<h3 style="margin-top: 0px;"><?php _e('Be safe with an automatic backup','updraftplus');?></h3>
-			<?php echo apply_filters('updraftplus_autobackup_blurb', __('UpdraftPlus Premium can  <strong>automatically</strong> take a backup of your plugins or themes and database before you update.', 'updraftplus').' <a href="https://updraftplus.com/shop/autobackup/">'.__('Be safe every time, without needing to remember - follow this link to learn more.' ,'updraftplus').'</a>'); ?>
+			<h3 style="margin-top: 2px;"><?php _e('Be safe with an automatic backup','updraftplus');?></h3>
+			<?php echo apply_filters('updraftplus_autobackup_blurb', $this->autobackup_ad_content()); ?>
 		</div>
 		<script>
 		jQuery(document).ready(function() {
@@ -586,6 +586,18 @@ class UpdraftPlus_Admin {
 		});
 		</script>
 		<?php
+	}
+	
+	private function autobackup_ad_content(){
+		global $updraftplus;
+		$our_version = @constant('SCRIPT_DEBUG') ? $updraftplus->version.'.'.time() : $updraftplus->version;
+		wp_enqueue_style('updraft-admin-css', UPDRAFTPLUS_URL.'/css/admin.css', array(), $our_version);
+		
+		$ret = '<div class="autobackup-description"><img class="autobackup-image" src="'.UPDRAFTPLUS_URL.'/images/automaticbackup.png" class="automation-icon"/>';
+		$ret .= '<div class="advert-description">'.__('UpdraftPlus Premium can automatically take a backup of your plugins or themes and database before you update. <a href="https://updraftplus.com/shop/autobackup/" target="_blank">Be safe every time, without needing to remember - follow this link to learn more</a>', 'updraftplus').'</div></div>';
+		$ret .= '<div class="advert-btn"><a href="https://updraftplus.com/shop/autobackup/" class="btn btn-get-started">'.__('Just this add-on', 'updraftplus').' <span class="circle-dblarrow">&raquo;</span></a></div>';
+		$ret .= '<div class="advert-btn"><a href="https://updraftplus.com/shop/updraftplus-premium/" class="btn btn-get-started">'.__('Full Premium plugin', 'updraftplus').' <span class="circle-dblarrow">&raquo;</span></a></div>';
+		return $ret;
 	}
 
 	public function admin_head() {
@@ -733,7 +745,7 @@ class UpdraftPlus_Admin {
 			<div id="updraft-autobackup" class="updated" style="float:left; padding: 6px; margin:8px 0px;">
 				<div style="float: right;"><a href="#" onclick="jQuery('#updraft-autobackup').slideUp(); jQuery.post(ajaxurl, {action: 'updraft_ajax', subaction: 'dismissautobackup', nonce: '<?php echo wp_create_nonce('updraftplus-credentialtest-nonce');?>' });"><?php echo sprintf(__('Dismiss (for %s weeks)', 'updraftplus'), 10); ?></a></div>
 				<h3 style="margin-top: 0px;"><?php _e('Be safe with an automatic backup','updraftplus');?></h3>
-				<p><?php echo __('UpdraftPlus Premium can  <strong>automatically</strong> take a backup of your plugins or themes and database before you update.', 'updraftplus').' <a href="https://updraftplus.com/shop/autobackup/">'.__('Be safe every time, without needing to remember - follow this link to learn more.' ,'updraftplus').'</a>'; ?></p>
+				<p><?php echo $this->autobackup_ad_content(); ?></p>
 			</div>
 			<?php
 		}
@@ -811,7 +823,6 @@ class UpdraftPlus_Admin {
 	public function show_admin_warning_googlecloud() {
 		$this->show_admin_warning('<strong>'.__('UpdraftPlus notice:','updraftplus').'</strong> <a class="updraft_authlink" href="'.UpdraftPlus_Options::admin_page_url().'?page=updraftplus&action=updraftmethod-googlecloud-auth&updraftplus_googleauth=doit">'.sprintf(__('Click here to authenticate your %s account (you will not be able to back up to %s without it).','updraftplus'), 'Google Cloud', 'Google Cloud').'</a>');
 	}
-
 
 	// This options filter removes ABSPATH off the front of updraft_dir, if it is given absolutely and contained within it
 	public function prune_updraft_dir_prefix($updraft_dir) {
@@ -1207,7 +1218,7 @@ class UpdraftPlus_Admin {
 					echo json_encode(array('e' => htmlspecialchars($response->get_error_message())));
 					die;
 				}
-				echo json_encode(array('r' => $response['response']['code'].': '.htmlspecialchars(substr($response['body'], 0, 2048))));
+				echo json_encode(array('r' => wp_remote_retrieve_response_code($response).': '.htmlspecialchars(substr(wp_remote_retrieve_body($response), 0, 2048))));
 			}
 			die;
 		} elseif (isset($_REQUEST['subaction']) && 'dismissautobackup' == $_REQUEST['subaction']) {
@@ -1346,7 +1357,8 @@ class UpdraftPlus_Admin {
 				unset($info['label']);
 
 				if (!isset($info['created_by_version']) && !empty($backups[$timestamp]['created_by_version'])) $info['created_by_version'] = $backups[$timestamp]['created_by_version'];
-				if (empty($info['multisite']) && !empty($backups[$timestamp]['is_multisite'])) $info['multisite'] = $backups[$timestamp]['is_multisite'];
+
+				if (!isset($info['multisite']) && !empty($backups[$timestamp]['is_multisite'])) $info['multisite'] = $backups[$timestamp]['is_multisite'];
 				
 				do_action_ref_array('updraftplus_restore_all_downloaded_postscan', array($backups, $timestamp, $elements, &$info, &$mess, &$warn, &$err));
 
@@ -2159,7 +2171,7 @@ class UpdraftPlus_Admin {
 		<a href="https://updraftplus.com/support/"><?php _e("Support",'updraftplus');?></a> | 
 		<?php if (!is_file(UPDRAFTPLUS_DIR.'/udaddons/updraftplus-addons.php')) { ?><a href="https://updraftplus.com/newsletter-signup"><?php _e("Newsletter sign-up", 'updraftplus');?></a> | <?php } ?>
 		<a href="http://david.dw-perspective.org.uk"><?php _e("Lead developer's homepage",'updraftplus');?></a> | 
-		<a href="https://updraftplus.com/support/frequently-asked-questions/">FAQs</a> | <a href="https://www.simbahosting.co.uk/s3/shop/"><?php _e('More plugins', 'updraftplus');?></a> - <?php _e('Version','updraftplus');?>: <?php echo $updraftplus->version; ?>
+		<a href="https://updraftplus.com/support/frequently-asked-questions/"><?php _e('FAQs', 'updraftplus'); ?></a> | <a href="https://www.simbahosting.co.uk/s3/shop/"><?php _e('More plugins', 'updraftplus');?></a> - <?php _e('Version','updraftplus');?>: <?php echo $updraftplus->version; ?>
 		<br>
 		<?php
 	}
@@ -2473,7 +2485,7 @@ class UpdraftPlus_Admin {
 					if (class_exists('UpdraftPlus_Addons_Migrator')) {
 						do_action('updraftplus_migrate_modal_output');
 					} else {
-						echo '<p id="updraft_migrate_modal_main">'.__('Do you want to migrate or clone/duplicate a site?', 'updraftplus').'</p><p>'.__('Then, try out our "Migrator" add-on. After using it once, you\'ll have saved the purchase price compared to the time needed to copy a site by hand.', 'updraftplus').'</p><p><a href="https://updraftplus.com/shop/migrator/">'.__('Get it here.', 'updraftplus').'</a></p>';
+						echo '<p id="updraft_migrate_modal_main">'.__('Do you want to migrate or clone/duplicate a site?', 'updraftplus').'</p><p>'.__('Then, try out our "Migrator" add-on. After using it once, you\'ll have saved the purchase price compared to the time needed to copy a site by hand.', 'updraftplus').'</p><p><a href="https://updraftplus.com/landing/migrator">'.__('Get it here.', 'updraftplus').'</a></p>';
 					}
 				?>
 			</div>
@@ -3778,7 +3790,9 @@ class UpdraftPlus_Admin {
 					$multi = apply_filters('updraftplus_storage_printoptions_multi', '');
 					
 					foreach($updraftplus->backup_methods as $method => $description) {
-						echo "<input name=\"updraft_service[]\" class=\"updraft_servicecheckbox $method $multi\" id=\"updraft_servicecheckbox_$method\" type=\"checkbox\" value=\"$method\"";
+						$backup_using = esc_attr(sprintf(__("Backup using %s?", 'updraftplus'), $description));
+						
+						echo "<input aria-label=\"$backup_using\" name=\"updraft_service[]\" class=\"updraft_servicecheckbox $method $multi\" id=\"updraft_servicecheckbox_$method\" type=\"checkbox\" value=\"$method\"";
 						if ($active_service === $method || (is_array($active_service) && in_array($method, $active_service))) echo ' checked="checked"';
 						echo " data-labelauty=\"".esc_attr($description)."\">";
 					}
@@ -4523,18 +4537,20 @@ ENDHERE;
 				if (!empty($backup['meta_foreign'])) {
 					$entities .= '/plugins=0//themes=0//uploads=0//others=0/';
 				}
-				$first_printed = true;
+				$printing_first = true;
 				foreach ($whatfiles as $findex => $bfile) {
-					$ide .= __('Press here to download', 'updraftplus').' '.strtolower($info['description']);
+					
 					$pdescrip = ($findex > 0) ? $sdescrip.' ('.($findex+1).')' : $sdescrip;
-					if (!$first_printed) {
+					if ($printing_first) {
+						$ide .= __('Press here to download', 'updraftplus').' '.strtolower($info['description']);
+					} else {
 						$ret .= '<div class="updraft-hidden" style="display:none;">';
 					}
 					if (count($backup[$type]) >0) {
-						$ide .= ' '.sprintf(__('(%d archive(s) in set).', 'updraftplus'), $howmanyinset);
+						if ($printing_first) $ide .= ' '.sprintf(__('(%d archive(s) in set).', 'updraftplus'), $howmanyinset);
 					}
 					if ($index_missing) {
-						$ide .= ' '.__('You appear to be missing one or more archives from this multi-archive set.', 'updraftplus');
+						if ($printing_first) $ide .= ' '.__('You appear to be missing one or more archives from this multi-archive set.', 'updraftplus');
 					}
 
 					if (!$first_entity) {
@@ -4545,10 +4561,10 @@ ENDHERE;
 
 					$ret .= $this->download_button($type, $key, $findex, $info, $ide, $pdescrip, $esc_pretty_date, $set_contents);
 
-					if (!$first_printed) {
+					if (!$printing_first) {
 						$ret .= '</div>';
 					} else {
-						$first_printed = false;
+						$printing_first = false;
 					}
 				}
 			} else {
@@ -4573,30 +4589,16 @@ ENDHERE;
 		return $ret;
 	}
 
-	private function download_button($type, $backup_timestamp, $findex, $info, $ide, $pdescrip, $esc_pretty_date, $set_contents) {
+	private function download_button($type, $backup_timestamp, $findex, $info, $title, $pdescrip, $esc_pretty_date, $set_contents) {
 	
 		$ret = '';
 
 		$wp_nonce = wp_create_nonce('updraftplus_download');
 		
 		// updraft_downloader(base, backup_timestamp, what, whicharea, set_contents, prettydate, async)
-		$ret .= '<button data-wp_nonce="'.esc_attr($wp_nonce).'" data-backup_timestamp="'.esc_attr($backup_timestamp).'" data-what="'.esc_attr($type).'" data-set_contents="'.esc_attr($set_contents).'" data-prettydate="'.esc_attr($esc_pretty_date).'" type="button" class="updraft_download_button '."uddownloadform_${type}_${backup_timestamp}_${findex}".'" title="'.$ide.'">'.$pdescrip.'</button>';
+		$ret .= '<button data-wp_nonce="'.esc_attr($wp_nonce).'" data-backup_timestamp="'.esc_attr($backup_timestamp).'" data-what="'.esc_attr($type).'" data-set_contents="'.esc_attr($set_contents).'" data-prettydate="'.esc_attr($esc_pretty_date).'" type="button" class="updraft_download_button '."uddownloadform_${type}_${backup_timestamp}_${findex}".'" title="'.$title.'">'.$pdescrip.'</button>';
 		// onclick="'."return updraft_downloader('uddlstatus_', '$backup_timestamp', '$type', '.ud_downloadstatus', '$set_contents', '$esc_pretty_date', true)".'"
 				
-				
-		// Pre 1.11.24
-// 		$nonce_field = wp_nonce_field('updraftplus_download', '_wpnonce', true, false);
-// 		$ret .= <<<ENDHERE
-// 				<form class="uddownloadform_${type}_${backup_timestamp}_${findex}" action="admin-ajax.php" onsubmit="return updraft_downloader('uddlstatus_', '$backup_timestamp', '$type', '.ud_downloadstatus', '$set_contents', '$esc_pretty_date', true)" method="post">
-// 					$nonce_field
-// 					<input type="hidden" name="action" value="updraft_download_backup" />
-// 					<input type="hidden" name="type" value="$type" />
-// 					<input type="hidden" name="timestamp" value="$backup_timestamp" />
-// 					<input type="hidden" name="findex" value="$findex" />
-// 					<input type="submit" class="updraft-backupentitybutton" title="$ide" value="$pdescrip" />
-// 				</form>
-// 			</div>
-// ENDHERE;
 		return $ret;
 	}
 
@@ -5108,7 +5110,7 @@ ENDHERE;
 		$no_remote_configured = (empty($service) || array('none') === $service || array('') === $service) ? true : false;
 
 		if ($no_remote_configured) {
-			return '<input type="checkbox" disabled="disabled" id="backupnow_includecloud"> <em>'.sprintf(__("Backup won't be sent to any remote storage - none has been saved in the %s", 'updraftplus'), '<a href="'.UpdraftPlus_Options::admin_page_url().'?page=updraftplus&amp;tab=settings" id="updraft_backupnow_gotosettings">'.__('settings', 'updraftplus')).'</a>. '.__('Not got any remote storage?', 'updraftplus').' <a href="https://updraftplus.com/support/updraftplus-vault-faqs/">'.__("Check out UpdraftPlus Vault.", 'updraftplus').'</a></em>';
+			return '<input type="checkbox" disabled="disabled" id="backupnow_includecloud"> <em>'.sprintf(__("Backup won't be sent to any remote storage - none has been saved in the %s", 'updraftplus'), '<a href="'.UpdraftPlus_Options::admin_page_url().'?page=updraftplus&amp;tab=settings" id="updraft_backupnow_gotosettings">'.__('settings', 'updraftplus')).'</a>. '.__('Not got any remote storage?', 'updraftplus').' <a href="https://updraftplus.com/landing/vault">'.__("Check out UpdraftPlus Vault.", 'updraftplus').'</a></em>';
 		} else {
 			return '<input type="checkbox" id="backupnow_includecloud" checked="checked"> <label for="backupnow_includecloud">'.__("Send this backup to remote storage", 'updraftplus').'</label>';
 		}

@@ -87,7 +87,7 @@
             $images = get_field('accreditation_gallery','option');
             if( $images ): ?>
             <?php foreach( $images as $image ):?>
-            <img src="<?php echo aq_resize($image['url'],130,45,false);?>" width="auto" height="45">
+            <img src="<?php echo aq_resize($image['url'],130,45,false);?>" height="45">
             <?php endforeach; ?>
           <?php endif; ?></li>
           <li class="xx-small"><?php the_field('accreditation_content', 'option'); ?> </li>

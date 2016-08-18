@@ -3043,3 +3043,4 @@
 [06-Aug-2016 02:23:15 UTC] PHP Fatal error:  Call to undefined function locate_template() in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 51
 [06-Aug-2016 13:25:21 UTC] PHP Fatal error:  Call to undefined function locate_template() in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 51
 [07-Aug-2016 16:29:04 UTC] PHP Fatal error:  Call to undefined function get_template_part() in /home/shengs4/public_html/wp-content/themes/Sharpe/404.php on line 1
+[11-Aug-2016 06:05:31 UTC] PHP Fatal error:  Call to undefined function locate_template() in /home/shengs4/public_html/wp-content/themes/Sharpe/functions.php on line 51

@@ -713,18 +713,18 @@
   /** Spacer Toggle Blocks **/
 }
 #mega-menu-wrap-primary_navigation .mega-menu-toggle #mega-toggle-block-1:before {
-  content: '\f333';
+  content: '\f214';
   font-family: 'dashicons';
   font-size: 24px;
   margin: 0 0 0 5px;
-  color: #fff;
+  color: #0e0505;
 }
 #mega-menu-wrap-primary_navigation .mega-menu-toggle.mega-menu-open #mega-toggle-block-1:before {
-  content: '\f153';
+  content: '\f343';
 }
 #mega-menu-wrap-primary_navigation .mega-menu-toggle #mega-toggle-block-1:after {
   content: '';
-  color: #fff;
+  color: #210d0d;
   float: left;
 }
 #mega-menu-wrap-primary_navigation .mega-menu-toggle.mega-menu-open #mega-toggle-block-1:after {
@@ -736,4 +736,4 @@
 #mega-menu-wrap-primary_navigation {
   clear: both;
 }
-/** Friday 29th of July 2016 02:59:42 AM **/
+/** Friday 12th of August 2016 02:29:48 AM **/

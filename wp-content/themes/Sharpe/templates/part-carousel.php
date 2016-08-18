@@ -15,7 +15,7 @@
         $count++;
         // (($count-1)%6==0)? $offset="col-lg-offset-1":$offset=""; ?>
         <div class="col-lg-2">
-          <img width="140" height="auto" src="<?php echo aq_resize($image['url'],170,60,false,true,false);  ?>" alt="<?php echo $image['alt']; ?>"  />
+          <img width="140" src="<?php echo aq_resize($image['url'],170,60,false,true,false);  ?>" alt="<?php echo $image['alt']; ?>"  />
         </div>
         <?php
         if ($count==$num_images) {?>
