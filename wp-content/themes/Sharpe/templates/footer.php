@@ -3,12 +3,33 @@
     <ul class="information">
       <li class="section">
         <ul>
-          <li><i class="sharpe-icon-info-bubble"></i></li>
-          <li class="title"><span >About Sharpe</span></li>
-          <li><p><a href="<?php echo get_home_url() ?>/about-sharpe/careers/">Careers at Sharpe Engineering</a></p></li>
+          <li><i class="sharpe-icon-ellipsis-bubble"></i></li>
+          <li class="title"><span >Contact Chinchilla</span></li>
+          <?php
+          // check if the flexible content field has rows of data
+          if( have_rows('footer_chinchilla_info','option') ):
+          // loop through the rows of data
+          while ( have_rows('footer_roma_info','option') ) : the_row();
+          if( get_row_layout() == 'telephone' ):?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php  elseif( get_row_layout() == 'email' ): ?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php  elseif( get_row_layout() == 'fax' ): ?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php  elseif( get_row_layout() == 'address_1' ): ?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php  elseif( get_row_layout() == 'address_2' ): ?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php endif;
+          endwhile;
+          else :
+          // no layouts found
+          endif;
+          ?>
+          <!-- <li><p><a href="<?php echo get_home_url() ?>/about-sharpe/careers/">Careers at Sharpe Engineering</a></p></li>
           <li><p><a href="<?php echo get_home_url() ?>/privacy-policy/">Our Privacy Policy</a></p></li>
           <li><p><a href="<?php echo get_home_url() ?>/terms-of-use/">Terms of use</a></p></li>
-        <li><p><a href="<?php echo get_home_url() ?>/extra-downloads">Downloads (view all)</a></p></li>
+                  <li><p><a href="<?php echo get_home_url() ?>/extra-downloads">Downloads (view all)</a></p></li> -->
         </ul>
       </li>
 <!--       <li class="section">
