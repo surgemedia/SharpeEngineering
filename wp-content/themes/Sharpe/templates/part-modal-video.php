@@ -9,7 +9,13 @@
         </div>
         <div class="modal-body">
           <div class="video" >
-            <?php the_field("video"); ?>
+            <?php //the_field("video"); ?>
+          <iframe width="100%" height="" src="https://www.youtube.com/embed/<?php echo getYtCode([
+          'youtube' => $vars['embed'],
+          'rel' => 0,
+          'showinfo' => 0,
+
+          ]); ?>" frameborder="0" allowfullscreen></iframe>
           </div>
           <div class="margin">
             <span class="title">DESCRIPTION</span>

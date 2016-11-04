@@ -35,13 +35,13 @@ $sage_includes = [
   'lib/action-post-type-people.php',                          // Mangentment Team
   'lib/action-post-type-downloads.php',                     // Download Area
   'lib/action-post-type-features.php',                     // Features
+  'lib/function-getYoutubeId.php',                     // Youtube function
   //'lib/action-post-type-case_study.php',                     // Case Studies
   'lib/action-post-type-testimonial.php',                     // Testimonial
   // 'lib/action-post-type-facilities.php',                          // Facilities
   'lib/action-registor-menu-locations.php',            // Testimonial
   
   // 'lib/shortcode-download.php',            // download shorcode
-
 
 
                                    
