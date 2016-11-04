@@ -11,7 +11,7 @@
           <div class="video" >
             <?php //the_field("video"); ?>
           <iframe width="100%" height="" src="https://www.youtube.com/embed/<?php echo getYtCode([
-          'youtube' => $vars['embed'],
+          'youtube' => get_field("video"),
           'rel' => 0,
           'showinfo' => 0,
 
