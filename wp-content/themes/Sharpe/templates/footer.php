@@ -9,7 +9,7 @@
           // check if the flexible content field has rows of data
           if( have_rows('footer_chinchilla_info','option') ):
           // loop through the rows of data
-          while ( have_rows('footer_roma_info','option') ) : the_row();
+          while ( have_rows('footer_chinchilla_info','option') ) : the_row();
           if( get_row_layout() == 'telephone' ):?>
           <li><p><?php the_sub_field('line'); ?></p></li>
           <?php  elseif( get_row_layout() == 'email' ): ?>
