@@ -236,3 +236,17 @@ $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
 // }
 
 // $("#target-location").css("font-size", size).html(resizer.html());
+
+ function getFrameContent(button){
+          console.log("a");
+          var html;
+          var frame;
+          var replace;
+          frame = jQuery(button).data('contentid');
+          replace = jQuery(button).data('replaceid');
+          jQuery("#"+replace).empty();
+          html = jQuery('[data-frameid="'+frame+'"]').clone();
+          jQuery("#"+replace).html(html);
+        }
+
+   

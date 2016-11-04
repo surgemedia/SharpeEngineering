@@ -38,4 +38,5 @@
       if(!($page->ID == get_the_ID())) {
         get_template_part('templates/part-modal', 'item'); 
       } ?>
+        
 </header>
