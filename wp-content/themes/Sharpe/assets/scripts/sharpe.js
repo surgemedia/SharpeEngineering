@@ -3,19 +3,33 @@ $( document ).ready(function(){
 /*==============================================
 =            Image Change Jumbotron            =
 ==============================================*/
+function set_background(bg_image){
+  console.log($(bg_image).attr('background'));
+  $(bg_image).backstretch($(bg_image).attr('background'),{duration:4000, fade:750});
+}
 function image_hover_background(bg_image){
   $("#slider_nav li img").hover(function(){
     $(bg_image).backstretch($(this).attr('jumbotron'));
   });
 
 }
+function roller_background(){
+  console.log('here');
+  $("#slider_nav li img").each(function(){
+    var url = $(this).attr("jumbotron");
+		$('.jumbotron.bg_image').data('backstretch').images.push(url);
+  });
+}
 function image_click_background(bg_image){
   $("#slider_nav li img").click(function(){
-    $(bg_image).backstretch($(this).attr('jumbotron'));
+    console.log($(this).attr('index'));
+    $(bg_image).backstretch("show", parseInt($(this).attr('index')));
   });
 
 }
 image_click_background(".jumbotron.bg_image");
+set_background(".jumbotron.bg_image");
+roller_background();
 
 /*=================================================
 =            Add Icon To Submit Button            =

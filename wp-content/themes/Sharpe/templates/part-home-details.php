@@ -4,22 +4,17 @@
         $images = get_field('gallery');
         if( $images ): ?>
         <ul id="slider_nav" class="">
-            <?php foreach( $images as $image ): ?>
+            <?php $index=1;
+                foreach( $images as $image ): ?>
             <li class="">
                 <!-- <a href="<?php echo $image['url']; ?>"> -->
-                <img width="150" height="125" src="<?php echo aq_resize($image['url'],150,125,true);  ?>" alt="<?php echo $image['alt']; ?>" jumbotron="<?php echo aq_resize($image['url'],1140,505, true, true, true ); ?>" />
+                <img width="150" height="125" src="<?php echo aq_resize($image['url'],150,125,true);  ?>" alt="<?php echo $image['alt']; ?>" index=<?php echo $index++;?> jumbotron="<?php echo aq_resize($image['url'],1140,505, true, true, true ); ?>" />
                 <!-- </a> -->
                 <!-- <p><?php echo $image['caption']; ?></p> -->
             </li>
             <?php endforeach; ?>
         </ul>
-        <script>
-            var instance = jQuery('jumbotron bg_image').data('backstretch');
-            <?php foreach( $images as $image ): ?>
-                instance.images.push('<?php echo aq_resize($image['url'],150,125,true);?>');
-            <?php endforeach; ?>
-            jQuery("jumbotron bg_image").backstretch({duration: 4000});
-        </script>
+        
         <?php endif; ?>
     </div>
     <div class="col-lg-5 col-md-5 clear-fix visible-md visible-lg">

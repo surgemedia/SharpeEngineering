@@ -115,7 +115,7 @@
     </ul>
   </div>
   <div class="bg_dark_grey">
-    <ul class='list-inline'>
+    <ul class='list-inline text-center footer-menu'>
       <li><p><a href="<?php echo get_home_url() ?>/about-sharpe/careers/">Careers at Sharpe Engineering</a></p></li>
       <li><p><a href="<?php echo get_home_url() ?>/privacy-policy/">Our Privacy Policy</a></p></li>
       <li><p><a href="<?php echo get_home_url() ?>/terms-of-use/">Terms of use</a></p></li>
