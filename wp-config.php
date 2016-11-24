@@ -16,21 +16,21 @@
  */
 //define('WP_CACHE', true); //Added by WP-Cache Manager
 define( 'WPCACHEHOME', '/home/shengs4/public_html/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
-define('WP_HOME','http://www.sharpeengineering.com.au/');
-define('WP_SITEURL','http://www.sharpeengineering.com.au/');
+define('WP_HOME','http://localhost/sharpe');
+define('WP_SITEURL','http://localhost/sharpe');
 define('WP_MEMORY_LIMIT', '64M');
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'shengs4_db1');
 
 /** MySQL database username */
-define('DB_USER', 'shengs4_usr1');
+define('DB_USER', 'hector');
 
 /** MySQL database password */
-define('DB_PASSWORD', '22uH1TaqmVAc');
+define('DB_PASSWORD', 'hector');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '192.168.0.51');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

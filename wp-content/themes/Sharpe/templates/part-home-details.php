@@ -13,6 +13,13 @@
             </li>
             <?php endforeach; ?>
         </ul>
+        <script>
+            var instance = jQuery('jumbotron bg_image').data('backstretch');
+            <?php foreach( $images as $image ): ?>
+                instance.images.push('<?php echo aq_resize($image['url'],150,125,true);?>');
+            <?php endforeach; ?>
+            jQuery("jumbotron bg_image").backstretch({duration: 4000});
+        </script>
         <?php endif; ?>
     </div>
     <div class="col-lg-5 col-md-5 clear-fix visible-md visible-lg">

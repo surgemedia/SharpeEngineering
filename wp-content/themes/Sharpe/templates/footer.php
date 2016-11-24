@@ -1,38 +1,8 @@
 <footer class="content-info" role="contentinfo">
   <div class="container">
     <ul class="information">
-      <li class="section">
-        <ul>
-          <li><i class="sharpe-icon-ellipsis-bubble"></i></li>
-          <li class="title"><span >Contact Chinchilla</span></li>
-          <?php
-          // check if the flexible content field has rows of data
-          if( have_rows('footer_chinchilla_info','option') ):
-          // loop through the rows of data
-          while ( have_rows('footer_chinchilla_info','option') ) : the_row();
-          if( get_row_layout() == 'telephone' ):?>
-          <li><p><?php the_sub_field('line'); ?></p></li>
-          <?php  elseif( get_row_layout() == 'email' ): ?>
-          <li><p><?php the_sub_field('line'); ?></p></li>
-          <?php  elseif( get_row_layout() == 'fax' ): ?>
-          <li><p><?php the_sub_field('line'); ?></p></li>
-          <?php  elseif( get_row_layout() == 'address_1' ): ?>
-          <li><p><?php the_sub_field('line'); ?></p></li>
-          <?php  elseif( get_row_layout() == 'address_2' ): ?>
-          <li><p><?php the_sub_field('line'); ?></p></li>
-          <?php endif;
-          endwhile;
-          else :
-          // no layouts found
-          endif;
-          ?>
-          <!-- <li><p><a href="<?php echo get_home_url() ?>/about-sharpe/careers/">Careers at Sharpe Engineering</a></p></li>
-          <li><p><a href="<?php echo get_home_url() ?>/privacy-policy/">Our Privacy Policy</a></p></li>
-          <li><p><a href="<?php echo get_home_url() ?>/terms-of-use/">Terms of use</a></p></li>
-                  <li><p><a href="<?php echo get_home_url() ?>/extra-downloads">Downloads (view all)</a></p></li> -->
-        </ul>
-      </li>
-<!--       <li class="section">
+      
+<!--  <li class="section">
         <ul>
           <li><i class="sharpe-icon-download"></i></li>
           <li class="title"><span>Downloads</span></li>
@@ -103,6 +73,34 @@
       </li>
       <li class="section">
         <ul>
+          <li><i class="sharpe-icon-ellipsis-bubble"></i></li>
+          <li class="title"><span >Contact Chinchilla</span></li>
+          <?php
+          // check if the flexible content field has rows of data
+          if( have_rows('footer_chinchilla_info','option') ):
+          // loop through the rows of data
+          while ( have_rows('footer_chinchilla_info','option') ) : the_row();
+          if( get_row_layout() == 'telephone' ):?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php  elseif( get_row_layout() == 'email' ): ?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php  elseif( get_row_layout() == 'fax' ): ?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php  elseif( get_row_layout() == 'address_1' ): ?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php  elseif( get_row_layout() == 'address_2' ): ?>
+          <li><p><?php the_sub_field('line'); ?></p></li>
+          <?php endif;
+          endwhile;
+          else :
+          // no layouts found
+          endif;
+          ?>
+          
+        </ul>
+      </li>
+      <li class="section">
+        <ul>
           <li class="title"><span >Quality Accreditations</span></i></li>
           <li><?php
             $images = get_field('accreditation_gallery','option');
@@ -117,6 +115,12 @@
     </ul>
   </div>
   <div class="bg_dark_grey">
+    <ul class='list-inline'>
+      <li><p><a href="<?php echo get_home_url() ?>/about-sharpe/careers/">Careers at Sharpe Engineering</a></p></li>
+      <li><p><a href="<?php echo get_home_url() ?>/privacy-policy/">Our Privacy Policy</a></p></li>
+      <li><p><a href="<?php echo get_home_url() ?>/terms-of-use/">Terms of use</a></p></li>
+      <li><p><a href="<?php echo get_home_url() ?>/extra-downloads">Downloads (view all)</a></p></li>
+    </ul>
     <div class="container bg_dark_grey lace">
       <div class="row">
         <div class="col-lg-4 col-md-4 "><span>&copy; Sharpe Engineering 2015 | All Rights reserved</span></div>

@@ -7,7 +7,7 @@
     echo aq_resize($img['url'],1140,505,true,true,true);
 
     }else{
-    echo aq_resize(the_field('default_jumbotron','option'),1140,505,true,true,true);
+    echo aq_resize(get_field('default_jumbotron','option'),1140,505,true,true,true);
     }
     ?>); 
     background-size: cover;
