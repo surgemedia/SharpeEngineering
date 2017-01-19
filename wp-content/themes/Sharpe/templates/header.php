@@ -34,8 +34,10 @@
   </div>
   <?php get_template_part('templates/part', 'jumbotron'); ?>
   <?php get_template_part('templates/part', 'breadcrumbs'); ?>
-  <?php $page = get_page_by_title( 'Contact Us' );
-      if(!($page->ID == get_the_ID())) {
+  <?php $page_contact_us = get_page_by_title( 'Contact Us' )->ID;
+        $page_careers = get_page_by_title( 'Careers' )->ID;
+        $current_page = get_the_ID();
+      if(!($page_contact_us == $current_page || $page_careers == $current_page)) {
         get_template_part('templates/part-modal', 'item'); 
       } ?>
         
